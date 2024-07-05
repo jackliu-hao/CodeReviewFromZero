@@ -7,7 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="day1-reflect" />
+        <module name="day2-JavaWeb" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="day2-javaWeb" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
