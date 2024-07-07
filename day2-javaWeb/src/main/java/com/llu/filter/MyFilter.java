@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.Base64;
 
-@WebFilter(urlPatterns = "/*")
+//@WebFilter(urlPatterns = "/*")
 public class MyFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {

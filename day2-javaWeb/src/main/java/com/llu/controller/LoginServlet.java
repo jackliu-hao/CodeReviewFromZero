@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Arrays;
 
-@WebServlet(name = "LoginServlet", urlPatterns = "/test" )
+//@WebServlet(name = "LoginServlet", urlPatterns = "/test" )
 public class LoginServlet extends HttpServlet {
 
     @Override
@@ -20,6 +20,7 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         // 获取id
         System.out.println("id -> " + req.getParameter("id"));
         //获取请求资源路径
@@ -39,13 +40,10 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");//设置字体防止乱码
+        // 获取请求URI
+        request.getRequestURI();
+        System.out.println("URI -> " + request.getRequestURI());
 
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        String[] hobbies = request.getParameterValues("hobby");
-        System.out.println("用户名: " + username );
-        System.out.println("密码 : " + password);
-        System.out.println("爱好 ： " + Arrays.asList(hobbies));
     }
 
     @Override

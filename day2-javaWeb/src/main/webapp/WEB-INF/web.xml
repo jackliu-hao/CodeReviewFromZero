@@ -4,22 +4,23 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
-<!--    欢迎页面-->
+    <!--    欢迎页面-->
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>login.jsp</welcome-file>
     </welcome-file-list>
 
 
     <!--    注册servlet-->
-<!--    <servlet>-->
-<!--        <servlet-name>test</servlet-name>-->
-<!--        <servlet-class>com.llu.controller.LoginServlet</servlet-class>-->
-<!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>test</servlet-name>-->
-<!--        <url-pattern>/test</url-pattern>-->
-<!--    </servlet-mapping>-->
+        <servlet>
+            <servlet-name>test</servlet-name>
+            <servlet-class>com.llu.controller.LoginServlet</servlet-class>
+        </servlet>
+
+        <servlet-mapping>
+            <servlet-name>test</servlet-name>
+            <url-pattern>/test</url-pattern>
+        </servlet-mapping>
 
     <error-page>
         <error-code>404</error-code>
