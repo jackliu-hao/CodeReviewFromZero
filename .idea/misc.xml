@@ -6,7 +6,7 @@
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/day2-javaWeb" />
+    <file type="web" url="file://$PROJECT_DIR$/day2-JavaWeb" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -14,6 +14,7 @@
         <option value="$PROJECT_DIR$/day1-reflect/pom.xml" />
         <option value="$PROJECT_DIR$/day2-javaWeb/pom.xml" />
         <option value="$PROJECT_DIR$/day2-JavaWeb/pom.xml" />
+        <option value="$PROJECT_DIR$/CVE-recurrent/pom.xml" />
       </list>
     </option>
   </component>

@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="day1-reflect" />
+        <module name="CVE-recurrent" />
         <module name="day2-JavaWeb" />
       </profile>
     </annotationProcessing>
