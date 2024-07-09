@@ -1,0 +1,16 @@
+version: '3.8'  # 请确保这里的版本与你的 Docker Compose 版本相匹配
+services:
+  mymysql: # 服务名称
+    image: mysql:8.0.11
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+
+volumes:
+  mysql_data:
+
+# 镜像源设置
+#https://blog.csdn.net/lwxvgdv/article/details/139871707
