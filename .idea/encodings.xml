@@ -3,7 +3,11 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/CVE-recurrent/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/CVE-recurrent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/React-Study/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/React-Study/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/day2-JavaWeb/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/day2-JavaWeb/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day3-sqlInject/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day3-sqlInject/src/main/resources" charset="UTF-8" />
   </component>
 </project>
