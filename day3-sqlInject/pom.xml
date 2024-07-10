@@ -14,4 +14,29 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.llu</groupId>
+            <artifactId>javaCodeReviewInfra</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+<!--        mysql8.0 驱动-->
+        <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.11</version>
+        </dependency>
+
+        <!-- MyBatis -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.5.7</version>
+        </dependency>
+
+    </dependencies>
+
 </project>
