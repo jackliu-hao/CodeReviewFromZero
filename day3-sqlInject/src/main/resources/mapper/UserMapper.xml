@@ -13,6 +13,9 @@
     <select id="selectAllUserTestLike" resultType="com.llu.bean.User">
         select * from user where userName like '%${userName}%'
     </select>
+    <select id="selectAllUserTestIn" parameterType="list" resultType="com.llu.bean.User">
+        select * from user where userName in (${inName})
+    </select>
 
 </mapper>
 

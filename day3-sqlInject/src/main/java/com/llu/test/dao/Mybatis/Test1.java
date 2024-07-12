@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Test1 {
@@ -30,11 +31,22 @@ public class Test1 {
     }
 
     public void testSelectser(){
-//        User user = sqlSession.selectOne("com.llu.mapper.UserMapper.selectUser", "1");
+//        User user = sqlSession.selectOne("com.llu.mapper.UserMapper.selectUser", "1 or 1 = 1" );
+//        System.out.println(user);
 //        List<User> users = sqlSession.selectList("com.llu.mapper.UserMapper.selectAllUser", "userName");
-        List<User> users = sqlSession.selectList("com.llu.mapper.UserMapper.selectAllUserTestLike", "admin");
+//        List<User> users = sqlSession.selectList("com.llu.mapper.UserMapper.selectAllUserTestLike", "admin");
 
-        System.out.println(users);
+//        List<String> strings = new ArrayList<>();
+//        strings.add("admin");
+//        strings.add("jack");
+
+//        List<User> users = sqlSession.selectList("com.llu.mapper.UserMapper.selectAllUserTestIn", "admin,jack");
+        //select * from user where userName in ('admin','jack')
+//        List<User> users = sqlSession.selectList("com.llu.mapper.UserMapper.selectAllUserTestIn", "'admin','jack'");
+        //select * from user where userName in (''admin','jack'')
+
+
+//        System.out.println(users);
 
     }
 
