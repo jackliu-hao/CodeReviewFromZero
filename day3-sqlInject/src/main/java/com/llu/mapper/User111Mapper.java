@@ -1,11 +1,10 @@
 package com.llu.mapper;
 
 import com.llu.bean.User;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-public interface UserMapper {
+public interface User111Mapper {
 
      User selectUser(String id);
 
@@ -13,7 +12,6 @@ public interface UserMapper {
 
      List<User> selectAllUserTestLike(String like);
 
-     List<User> selectAllUserTestIn( String inName);
-
+     List<User> selectSomeUserByIn(String inParam);
 
 }

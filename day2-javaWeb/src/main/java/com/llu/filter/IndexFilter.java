@@ -26,7 +26,7 @@ public class IndexFilter implements Filter {
         String requestURI = req.getRequestURI();
 
         // 检查请求的URL是否为"/index"，如果是，判断是否登录
-        if (requestURI.endsWith("index.jsp")) {
+        if (requestURI.endsWith("index.jsp")) { // aaa/../
             if (req.getSession().getAttribute("user") == null) {
                 // 未登录，重定向到登录页面
                 res.sendRedirect(req.getContextPath() + "/login.jsp");

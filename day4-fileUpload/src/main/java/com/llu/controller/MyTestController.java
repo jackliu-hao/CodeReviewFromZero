@@ -76,15 +76,15 @@ public class MyTestController {
         /**
          * 定义上传文件的目录。
          */
-        String tmpPath= "/tmp/";
+
         // 目标路径
-        String realPath = request.getServletContext().getRealPath("/upload");
+        String realPath = uploadDir;
         File realFile = new File(realPath);
         if (!realFile.exists() && !realFile.isDirectory()){
             realFile.mkdirs();
         }
         // 临时目录
-        File temFile = new File(tmpPath);
+        File temFile = new File(uploadDir);
         if (!temFile.exists() && !temFile.isDirectory()){
             temFile.mkdirs();
         }
@@ -117,7 +117,7 @@ public class MyTestController {
                 //
                 String fileName = fileItem.getName();
                 if (fileName != null && !"".equals(fileName)){
-                    // 获取上传文件的原始文件名
+                    // 获取上传文件的原始文件后缀
                     // todo
                     String suffix = fileName.substring(fileName.indexOf("."));
                     // todo

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    引入Ajax-->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>个人信息</h1>
+<!--     使用ajax请求获取个人信息，请求地址： http://127.0.0.1:8080/user/info-->
+<div id="info"></div>
+<script>
+    // 发送方式是json
+    $.ajax({
+        url: "http://127.0.0.1:8080/user/info",
+        type: "get",
+        dataType: "json",
+        success: function (data) {
+            // 登录成功
+            if (data.result) {
+                // 获取个人信息
+                var info = data.data;
+                // 拼接html
+                var html = "<p>登录名：" + info.loginname + "</p>";
+                html += "<p>用户名：" + info.username + "</p>";
+                html += "<p>密码：" + info.password + "</p>";
+                html += "<p>id：" + info.id + "</p>";
+                $("#info").html(html);
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

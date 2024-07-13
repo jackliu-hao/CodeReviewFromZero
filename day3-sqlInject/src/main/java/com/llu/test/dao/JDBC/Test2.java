@@ -20,19 +20,19 @@ public class Test2 {
         // 8.释放资源
         Connection conn = null;
         try {
-//            String id = "1 ' or 1=1 -- ";
-            String id = "1";
-            String orderBy = "name";
+            String id = "1 ' or 1=1 -- ";
+//            String id = "1";
+            String orderBy = "userName";
             int orderByInt = 1;
             String userName = "%admin%";
             conn = getConnection();
-//            String sql = "select * from user where id = ? order by ?";
-//           String sql = "select * from user where userName like '%" + userName + "%'";
-            String sql = "select * from user where userName like ?";
+            String sql = "select * from user  order by " + orderBy;
+//           String sql = "select * from user where userName like ?";
+//            String sql = "select * from user where id = ? ";
 
             java.sql.PreparedStatement pstmt = conn.prepareStatement(sql);
 
-            pstmt.setString(1,  userName );
+//            pstmt.setString(1,  orderBy);
 
 //            pstmt.setString(1, id);
 //            pstmt.setInt(2, orderByInt);

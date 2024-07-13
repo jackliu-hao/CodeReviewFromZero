@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:mysql://1.92.65.242:3306/codeReview?useSSL=false&serverTimezone=UTC
+    username: root
+    password: admin!@#..admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapper/*.xml # mapper映射文件路径
+  type-aliases-package: com.llu.bean   # 配置哪个包下的类有默认的别名
+#  打印mybatis日志
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+

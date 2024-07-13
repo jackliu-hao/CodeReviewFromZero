@@ -22,7 +22,9 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="day3-sqlInject" options="-parameters" />
       <module name="day4-fileUpload" options="-parameters" />
+      <module name="javaCodeReviewInfra" options="-parameters" />
     </option>
   </component>
 </project>

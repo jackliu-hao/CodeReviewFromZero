@@ -89,6 +89,13 @@ public class UserController extends BaseServlet {
         user.setPassword(request.getParameter("password"));
         String role = request.getParameter("role");
 
+        //  判断是否已经登录
+        if (request.getSession().getAttribute("user") != null){
+            // 已经登录
+            resp.sendRedirect(request.getContextPath() + "/index.jsp");
+            return;
+        }
+
         CommonBean commonBean = judgeLogin(user, role,request);
 
         if (commonBean != null){

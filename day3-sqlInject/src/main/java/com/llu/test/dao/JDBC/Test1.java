@@ -25,7 +25,7 @@ public class Test1 {
         try {
             // 获取链接
             conn = getConnection();
-            String id = "1 or 1=1 ";
+            String id = "1  or 1=1 ";
 
             // 4. 定义 SQL 语句
             String sql = "SELECT * FROM user WHERE id = " + id;

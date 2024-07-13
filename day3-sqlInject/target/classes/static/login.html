@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<!--  登录界面，使用Ajax的post请求，登录，登录的接口地址： http://127.0.0.1:8080/user/login  -->
+<form id="loginForm">
+    <input type="text" name="loginname" placeholder="请输入用户名">
+    <input type="password" name="password" placeholder="请输入密码">
+    <input type="button" value="登录" onclick="login()">
+
+    <input type="button" value="注册" onclick="register()">
+
+
+    </input>
+</form>
+
+<script>
+
+    // 定义对象用于数据传输
+    user = {
+        loginname: "",
+        password: ""
+    }
+
+    function login() {
+
+        user.loginname = $("#loginForm input[name='loginname']").val();
+        user.password = $("#loginForm input[name='password']").val();
+        var formData = JSON.stringify(user);
+
+        $.ajax({
+            url: "http://127.0.0.1:8080/user/login",
+            type: "post",
+            contentType:'application/json', // 要制定模式 默认Urlencoded
+            data: formData,
+            success: function (data) {
+                // 登录成功
+                console.log(data);
+                if (data.result) {
+                    alert("登录成功");
+                    // 跳转到 index.html
+                    window.location.href = "http://127.0.0.1:8080/index.html";
+                }else {
+                    alert("用户名或密码错误");
+                }
+            }
+        })
+    }
+    function register() {
+        // 获取表单数据
+        // 发送ajax请求,请求体是json数据格式 ,如: data:JSON.stringify({'name':'jack', 'age':18}),
+        user.loginname = $("#loginForm input[name='loginname']").val();
+        user.password = $("#loginForm input[name='password']").val();
+        var formData = JSON.stringify(user);
+
+
+
+        $.ajax({
+            url: "http://127.0.0.1:8080/user/register",
+            type: "post",
+            contentType:'application/json', // 要制定模式 默认Urlencoded
+            data: formData,
+            success: function (data) {
+                // 登录成功
+                console.log(data);
+                if (data.result) {
+                    alert("注册成功");
+                }else {
+                    alert("注册失败");
+                }
+            }
+        })
+    }
+</script>
+
+</body>
+</html>
