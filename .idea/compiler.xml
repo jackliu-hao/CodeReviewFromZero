@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="CVE-recurrent" />
         <module name="day3-sqlInject" />
+        <module name="day5-commandInject" />
         <module name="day1-reflect" />
         <module name="day4-fileUpload" />
         <module name="day2-JavaWeb" />
@@ -24,6 +25,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="day3-sqlInject" options="-parameters" />
       <module name="day4-fileUpload" options="-parameters" />
+      <module name="day5-commandInject" options="-parameters" />
       <module name="javaCodeReviewInfra" options="-parameters" />
     </option>
   </component>
