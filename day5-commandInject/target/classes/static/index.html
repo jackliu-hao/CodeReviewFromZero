@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--     使用Ajax向接口 /ping 发送请求，请求成功后，在页面上显示请求结果-->
+
+<!-- form 表单，填写IP-->
+ping By ProcessBuilder
+<form id="pingForm">
+    <input type="text" name="ip" placeholder="请输入IP">
+    <input type="button" value="ping" onclick="ping()">
+</form>
+
+ping By Runtime
+<form id="pingForm1">
+    <input type="text" name="ip" placeholder="请输入IP">
+    <input type="button" value="ping" onclick="ping1()">
+</form>
+
+<div id="result"></div>
+<!--引入jquery-->
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    function ping() {
+        var ip = $("#pingForm input[name='ip']").val();
+        $.ajax({
+            url: "http://127.0.0.1:8080/ping?ip=" + encodeURI(ip),
+            type: "get",
+            success: function (data) {
+                // 登录成功
+                console.log(data);
+                $("#result").html(data.data);
+            }
+        });
+    }
+
+    function ping1() {
+        var ip = $("#pingForm1 input[name='ip']").val();
+        $.ajax({
+            url: "http://127.0.0.1:8080/ping1?ip=" + encodeURI(ip),
+            type: "get",
+            success: function (data) {
+                // 登录成功
+                console.log(data);
+                $("#result").html(data.data);
+            }
+        });
+    }
+</script>
+
+
+</body>
+</html>
