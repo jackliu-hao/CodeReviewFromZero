@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="day8-SSTIInject" />
         <module name="day3-sqlInject" />
         <module name="day5-commandInject" />
         <module name="day1-reflect" />
@@ -14,6 +15,7 @@
         <module name="CVE-recurrent" />
         <module name="day6-SpelInject" />
         <module name="day2-JavaWeb" />
+        <module name="day7-OGNLInject" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
