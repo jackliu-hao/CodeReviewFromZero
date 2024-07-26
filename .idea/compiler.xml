@@ -8,6 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="day8-SSTIInject" />
+        <module name="day9-XXE" />
+        <module name="day10-XSS" />
         <module name="day3-sqlInject" />
         <module name="day5-commandInject" />
         <module name="day1-reflect" />
@@ -26,6 +28,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="day10-XSS" options="-parameters" />
       <module name="day3-sqlInject" options="-parameters" />
       <module name="day4-fileUpload" options="-parameters" />
       <module name="day5-commandInject" options="-parameters" />

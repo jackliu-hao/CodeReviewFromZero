@@ -23,6 +23,8 @@
         <option value="$PROJECT_DIR$/day6-SpelInject/pom.xml" />
         <option value="$PROJECT_DIR$/day7-OGNLInject/pom.xml" />
         <option value="$PROJECT_DIR$/day8-SSTIInject/pom.xml" />
+        <option value="$PROJECT_DIR$/day9-XXE/pom.xml" />
+        <option value="$PROJECT_DIR$/day10-XSS/pom.xml" />
       </list>
     </option>
   </component>

